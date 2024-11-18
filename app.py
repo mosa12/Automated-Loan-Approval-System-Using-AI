@@ -11,8 +11,8 @@ except FileNotFoundError as e:
     st.stop()
 
 # App Title and Description
-st.title('Automated Loan Approval System Using AI')
-st.subheader('By TEAM-7')
+st.title('LendBot')
+st.subheader('Automated Loan Approval System Using AI--By TEAM-7')
 st.markdown("### Predict your loan approval status by filling in the details below:")
 
 # User Inputs with number input and slider behavior
