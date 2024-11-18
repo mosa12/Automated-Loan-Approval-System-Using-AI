@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-import pickle as pk
+import pickle
 
 # Load model and scaler
 try:
-    model = pk.load(open('model.pkl', 'rb'))
-    scaler = pk.load(open('scaler.pkl', 'rb'))
+    model = pickle.load(open('model.pkl', 'rb'))
+    scaler = pickle.load(open('scaler.pkl', 'rb'))
 except FileNotFoundError as e:
     st.error("Model or scaler file not found. Please upload 'model.pkl' and 'scaler.pkl'.")
     st.stop()
