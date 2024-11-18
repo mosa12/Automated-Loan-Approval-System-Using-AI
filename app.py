@@ -26,6 +26,7 @@ st.markdown("### Predict loan approval status for a single person or batch of pe
 st.markdown("### Predict for a single person:")
 
 # User Inputs with number input and slider behavior
+name = st.text_input("Enter your Name:")
 no_of_dep = st.number_input('Number of Dependents', min_value=0, max_value=5, step=1, help="Enter the number of dependents (0-5).")
 grad = st.selectbox('Education Level', ['Graduated', 'Not Graduated'])
 self_emp = st.selectbox('Self-Employed', ['Yes', 'No'])
@@ -58,9 +59,9 @@ if st.button("Predict for Single Person"):
         
         # Display the result
         if prediction[0] == 1:
-            st.success('🎉 Loan is Approved!')
+            st.success('Congratulation 🎉Your Loan is Approved!')
         else:
-            st.error('❌ Loan is Rejected. Try adjusting your inputs or reviewing your financial status.')
+            st.error('Sorry Your ❌ Loan is Rejected. Try adjusting your inputs or reviewing your financial status.')
     except ValueError as e:
         st.error(f"ValueError: {e}. Please check your input values.")
     except Exception as e:
